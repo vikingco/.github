@@ -1,0 +1,29 @@
+# Aikido scanning configuration
+# Docs: https://help.aikido.dev/code-scanning/scanning-practices/ignore-via-code-with-aikido-files
+
+# Path exclusions -- add repo-specific paths as needed
+# exclude:
+#   paths:
+#     - docs/examples
+#     - test/fixtures
+
+# CVE ignores -- add accepted CVEs with a reason
+# ignore:
+#   cves:
+#     CVE-YYYY-XXXXX:
+#       reason: "Accepted risk -- not reachable in our deployment"
+
+# AutoFix PR configuration
+autofix:
+  pr_config:
+    branch_prefix: "aikido/"
+    title_prefix: "[Aikido] "
+    commit_prefix: "fix(security): "
+    labels: "aikido,security,$SEVERITY"
+    draft_pr: false
+    create_task_for_pr: true
+    task_title_prefix: "[AIK] "
+  automated:
+    disabled: false
+    dependency:
+      update_policy: minor_and_patch_versions_only
