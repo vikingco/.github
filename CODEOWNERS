@@ -1,0 +1,5 @@
+# CODEOWNERS -- Cloud & Infrastructure team owns everything in this repo
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Catch-all: CNI team owns all files
+*       @vikingco/cloud-infrastructure
